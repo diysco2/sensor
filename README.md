@@ -90,8 +90,9 @@ Before you start, you are going to need the following items:
 
 ***
 ## Putting together your Custom Hardware Board
-<img src="http://placehold.it/700x300">
+The custom hardware board instructions will be improved in the near future. For now, please refer to the instructions [here](https://github.com/diysco2/sensor/blob/master/Assembly/Board%20manufacturing.pdf).
 
+<img src="http://placehold.it/700x300">
 
 ***
 ## Assembling the Arduino Components
@@ -119,7 +120,6 @@ There are 2 temperature sensors that are part of the system. One thermometer goe
 
 
 
-
 ***
 ## Power Supply:
 
@@ -135,10 +135,55 @@ You will take your wires for your sensor and attach 2-pin molex fittings (http:/
 
 
 ***
-## Inlet Tube System & Filter
+## Inlet Tube System, Pump, & Filter
 
-The inlet tube system 
+The inlet tube system is composed of a 3m long inlet tube, the balston filter, and the pump. In this section we will see how to add this to our DIYSCO2 Box.
+
+### Inlet tube:
+
 <img src="http://placehold.it/700x300">
+
+* Get your tubing and cut the tube length to the length appropriate for your use case. 
+* slide on a swagelok tube fitting (https://www.swagelok.com/en/catalog/Product/Detail?part=SS-400-6) to the tube ends - make sure the fittings are faced towards the ends so you can fasten them to connectors later.
+* attach the steel (or copper) ferrule (https://www.swagelok.com/en/catalog/Product/Detail?part=SS-400-SET) to the end of the tube. 
+* Tighten the nut with a connector 1.25 turns to secure the ferrule to the tube without crushing the tube.
+
+### Outlet tube:
+Repeat the steps above to create an outlet tube (if desired). Our experience was that it reduced the noise generated from the pump of the sensor and also releases the samples outside of the vehicle.
+
+### Intermediate tube between inlet and filter:
+
+<img src="http://placehold.it/700x300">
+
+Between your inlet tube and the balston filter, there is a short bit of tubing. On one end you will attach a ferrule and nut and on the other end, you will attach the Pneumatic Straight Union Tube OD Push to Connect Fitting (e.g. https://ae01.alicdn.com/kf/HTB1W.W2PpXXXXXvXpXXq6xXFXXXh/UXCELL-2-Pcs-10Mm-To-8Mm-Straight-Pneumatic-Fitting-Push-In-Quick-Connectors.jpg_640x640.jpg). 
+
+### Balston filter:
+
+<img src="http://placehold.it/700x300">
+
+You will attach one end of the balston tube to the Pneumatic Straight Union Tube OD Push to Connect Fitting which is connected to the `intermediate tube` you just made above. On the other end, you will attach more another Pneumatic Straight Union Tube OD Push to Connect Fitting.
+
+
+### Tubing from Balston Filter into the sample-in of the Li-820 irga
+
+<img src="http://placehold.it/700x300">
+
+Based on the length that now exists between the filter and the sample-in of the li-820, cut a length of tube. You will slip the li-820 nut over the tube and then firmly squeeze the tube over the sample-in nozzle. Pull the nut over the threads of the sample-in nozzle and then tighten.
+
+### Tubing from Li-820 to pump and the outlet 
+
+<img src="http://placehold.it/700x300">
+
+* Cut a short length of tube (~7-10cm)
+* attach one end to the in-direction (it should just slip on - careful, you don't want to break the nozzle)
+* slip a li-820 nut onto the tube faced outward
+* firmly squeeze the tube over the sample-in nose and screw the nut onto the li-820.
+* last, you will prepare a tube for the outlet of the samples.
+* First cut a tube length of the remaining distance between the outlet of the pump to the outlet of the box.
+* place a ferrule and a nut on one end and secure it to the tube.
+* connect the free end of the tube to the out-direction of the pump.
+
+NOTE: you may use a heating gun to bend the tube so that it fits easier/nicer into the box and around the nozzles. 
 
 
 
