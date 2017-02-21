@@ -151,8 +151,6 @@ You will take your wires for your sensor and attach 2-pin molex fittings (http:/
 NOTE: You will need a crimper to crimp the pins to the ends of the wires.
 
 
-
-
 ***
 ## Inlet Tube System, Pump, & Filter
 
