@@ -1,6 +1,8 @@
 # Sensor
 This repository describes the steps needed to build a DIYSCO2 Sensor. Both, the hardware and software components are covered here. Please note that the hardware setup is subject to change and therefore the documentation will update accordingly. 
 
+<img src="img/00_diysco2-annotated.png" width="700px">
+
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -13,8 +15,16 @@ This repository describes the steps needed to build a DIYSCO2 Sensor. Both, the 
     - [Adafruit GPS](#adafruit-gps)
     - [Standard A-B USB cable to power the Arduino Mega](#standard-a-b-usb-cable-to-power-the-arduino-mega)
     - [Temperature Sensors](#temperature-sensors)
+  - [RS232 to Arduino Connector Cable](#rs232-to-arduino-connector-cable)
   - [Power Supply:](#power-supply)
-  - [Inlet Tube System & Filter](#inlet-tube-system--filter)
+  - [Inlet Tube System, Pump, & Filter](#inlet-tube-system-pump--filter)
+    - [Inlet tube:](#inlet-tube)
+    - [Outlet tube:](#outlet-tube)
+    - [Intermediate tube between inlet and filter:](#intermediate-tube-between-inlet-and-filter)
+    - [Balston filter:](#balston-filter)
+    - [Tubing from Balston Filter into the sample-in of the Li-820 irga](#tubing-from-balston-filter-into-the-sample-in-of-the-li-820-irga)
+    - [Tubing from Li-820 to pump and the outlet](#tubing-from-li-820-to-pump-and-the-outlet)
+  - [Wiring Everything up:](#wiring-everything-up)
 - [Software: Arduino & Li-820](#software-arduino--li-820)
   - [The DIYSCO2 Software & Arduino](#the-diysco2-software--arduino)
     - [Install the libraries](#install-the-libraries)
@@ -97,6 +107,7 @@ The custom hardware board instructions will be improved in the near future. For 
 ***
 ## Assembling the Arduino Components
 ### Adafruit GPS
+
 Your adafruit GPS will come with break away headers. You will need to solder the pins in order to connect it to the custom hardware board. 
 
 The diagram below shows which pins should be soldered for our use case.
@@ -112,13 +123,21 @@ The Arduino Mega is powered by 5V which is fed in through the USB port. In order
 2. Strip the shrink wrapping around the cut end to expose the wires below - there should be a red and black wire. 
 3. Strip the shrink wrapping around the red and the black wire
 
-
 ### Temperature Sensors
-There are 2 temperature sensors that are part of the system. One thermometer goes within the box to monitor the internal box temperature and the other thermometer goes outside next to the inlet. You will need to add wire to each temperature sensor to elongate them. The internal thermometer will be extended to ~25-30cm and the external thermometer to ~3m in length.
 
 <img src="http://placehold.it/700x300">
 
+There are 2 temperature sensors that are part of the system. One thermometer goes within the box to monitor the internal box temperature and the other thermometer goes outside next to the inlet. You will need to add wire to each temperature sensor to elongate them. The internal thermometer will be extended to ~25-30cm and the external thermometer to ~3m in length.
 
+
+
+***
+
+## RS232 to Arduino Connector Cable
+
+<img src="http://placehold.it/700x300">
+
+The instructions for creating the connector cable from the li-820 to the arduino can be found [here](https://github.com/diysco2/sensor/blob/master/Assembly/ARDUINO_RS232_cable.pdf).
 
 ***
 ## Power Supply:
@@ -129,7 +148,7 @@ We rely on an input 12V power supply for the DIYSCO2 system. You may choose to p
 
 You will take your wires for your sensor and attach 2-pin molex fittings (http://cablesandconnectors.com/PIX/moljr2pin.jpg) - the male side will go on the wires attached to your DIYSCO2 and the female fittings will go to where the power is coming from.
 
-***You will need a crimper to crimp the pins to the ends of the wires.
+NOTE: You will need a crimper to crimp the pins to the ends of the wires.
 
 
 
@@ -155,20 +174,24 @@ Repeat the steps above to create an outlet tube (if desired). Our experience was
 
 <img src="http://placehold.it/700x300">
 
-Between your inlet tube and the balston filter, there is a short bit of tubing. On one end you will attach a ferrule and nut and on the other end, you will attach the Pneumatic Straight Union Tube OD Push to Connect Fitting (e.g. https://ae01.alicdn.com/kf/HTB1W.W2PpXXXXXvXpXXq6xXFXXXh/UXCELL-2-Pcs-10Mm-To-8Mm-Straight-Pneumatic-Fitting-Push-In-Quick-Connectors.jpg_640x640.jpg). 
+* Between your inlet tube and the balston filter, there is a short bit of tubing. 
+* On one end you will attach a ferrule and nut and on the other end, you will attach the Pneumatic Straight Union Tube OD Push to Connect Fitting (e.g. https://ae01.alicdn.com/kf/HTB1W.W2PpXXXXXvXpXXq6xXFXXXh/UXCELL-2-Pcs-10Mm-To-8Mm-Straight-Pneumatic-Fitting-Push-In-Quick-Connectors.jpg_640x640.jpg). 
 
 ### Balston filter:
 
 <img src="http://placehold.it/700x300">
 
-You will attach one end of the balston tube to the Pneumatic Straight Union Tube OD Push to Connect Fitting which is connected to the `intermediate tube` you just made above. On the other end, you will attach more another Pneumatic Straight Union Tube OD Push to Connect Fitting.
+* You will attach one end of the balston tube to the Pneumatic Straight Union Tube OD Push to Connect Fitting which is connected to the `intermediate tube` you just made above. 
+* On the other end, you will attach more another Pneumatic Straight Union Tube OD Push to Connect Fitting.
 
 
 ### Tubing from Balston Filter into the sample-in of the Li-820 irga
 
 <img src="http://placehold.it/700x300">
 
-Based on the length that now exists between the filter and the sample-in of the li-820, cut a length of tube. You will slip the li-820 nut over the tube and then firmly squeeze the tube over the sample-in nozzle. Pull the nut over the threads of the sample-in nozzle and then tighten.
+* Based on the length that now exists between the filter and the sample-in of the li-820, cut a length of tube. 
+* You will slip the li-820 nut over the tube and then firmly squeeze the tube over the sample-in nozzle. 
+* Pull the nut over the threads of the sample-in nozzle and then tighten.
 
 ### Tubing from Li-820 to pump and the outlet 
 
@@ -185,6 +208,13 @@ Based on the length that now exists between the filter and the sample-in of the 
 
 NOTE: you may use a heating gun to bend the tube so that it fits easier/nicer into the box and around the nozzles. 
 
+***
+
+## Wiring Everything up:
+
+<img src="http://placehold.it/700x300">
+
+If you've made it this far, bravo! Now it's time to wire everything up (woo!). Please refer to the following diagram to see where all of the wires go.
 
 
 ***
