@@ -241,7 +241,7 @@ You will need to make sure that the Li-820 has the right configurations uploaded
 ### Check your system
 To check what the current config of your system - send this via hyperterminal:
 
-1. First: connect to the instrument (look for the little telephone icon)
+1. First: connect to the instrument (look for the little telephone icon) - you will need to connect the rs232 cable with your computer's rs232 port.
 
 2. Second: copy 1 of the following commands from a text editor:
 
