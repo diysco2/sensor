@@ -100,9 +100,9 @@ Before you start, you are going to need the following items:
 
 ***
 ## Putting together your Custom Hardware Board
-The custom hardware board instructions will be improved in the near future. For now, please refer to the instructions [here](https://github.com/diysco2/sensor/blob/master/Assembly/Board%20manufacturing.pdf).
+The custom hardware board instructions will be improved in the near future. For now, please refer to the instructions [here](CHB-assembly.md).
 
-<img src="http://placehold.it/700x300">
+<img src="img/chb-023.jpg" width="700px">
 
 ***
 ## Assembling the Arduino Components
@@ -137,7 +137,7 @@ There are 2 temperature sensors that are part of the system. One thermometer goe
 
 <img src="http://placehold.it/700x300">
 
-The instructions for creating the connector cable from the li-820 to the arduino can be found [here](https://github.com/diysco2/sensor/blob/master/Assembly/ARDUINO_RS232_cable.pdf).
+The instructions for creating the connector cable from the li-820 to the arduino can be found [here](img/ARDUINO_RS232_cable.pdf).
 
 ***
 ## Power Supply:
